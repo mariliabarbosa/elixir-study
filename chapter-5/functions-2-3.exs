@@ -5,17 +5,12 @@ fizzbuzz = fn
   [_, _, n] -> IO.puts "#{n}\n"
 end
 
-n = 10
-fizzbuzz.([rem(n,3), rem(n,5), n])
-n = 11
-fizzbuzz.([rem(n,3), rem(n,5), n])
-n = 12
-fizzbuzz.([rem(n,3), rem(n,5), n])
-n = 13
-fizzbuzz.([rem(n,3), rem(n,5), n])
-n = 14
-fizzbuzz.([rem(n,3), rem(n,5), n])
-n = 15
-fizzbuzz.([rem(n,3), rem(n,5), n])
-n = 16
-fizzbuzz.([rem(n,3), rem(n,5), n])
+fb = fn n -> fizzbuzz.([rem(n,3), rem(n,5), n]) end
+
+fb.(10)
+fb.(11)
+fb.(12)
+fb.(13)
+fb.(14)
+fb.(15)
+fb.(16)
